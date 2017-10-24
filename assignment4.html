@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+Nataly.Ling 000766302
+</head>
+<body>
+
+<h2>Salary Checker</h2>
+
+<p id="demo"></p>
+
+<script>
+
+var count = parseInt(prompt("please enter 1 to keep going and -1 to stop"));
+
+
+document.write("<table border='6'><tr><td>Employee Name</td><td>Hours Worked</td><td>Gross Pay</td><td>Net Pay</td></tr>");
+
+while( count>0){
+var Names =(prompt( "please enter your name", " "));
+var salary = parseInt(prompt("please enter your salary", 15));
+var hours= parseInt(prompt("please enter hours worked ",30));
+
+if (hours > 40){ 
+ var  addHours = hours-40;
+ var addSalary = salary * 1.5;
+ var grossPay =(40*salary) + (addHours*addSalary);
+ var netPay= grossPay*85/100;}
+ 
+ else{
+ var grossPay = hours*salary;
+ var netPay = grossPay*85/100;
+ }
+document.write("<tr><td>"+ Names +"</td><td>"+hours+"</td><td>"+grossPay+"</td><td>"+netPay+"</td</tr>");
+count = parseInt(prompt("please enter 1 to keep going and -1 to stop"));
+
+if( count==-1){
+
+break;
+ }
+ }
+document.write("</table>");
+</script>
+
+</body>
+</html>
+
+
